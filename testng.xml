@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <test name="Selenium Project Tests" verbose="2" preserve-order="true">
+        <classes>
+            <class name="Actionclass"/>
+            <class name="Alert"/>
+            <class name="Calenderspecificdates"/>
+            <class name="CheckBox"/>
+            <class name="Claneder"/>
+            <class name="DropDowns"/>
+            <class name="E2EApllication"/>
+            <class name="Ecommerce"/>
+            <class name="Firstclass"/>
+            <class name="Frames"/>
+            <class name="Screenshot"/>
+            <class name="Sslcertification"/>
+            <class name="Windowhandles"/>
+
+        </classes>
+    </test>
+
+
+</suite>
