@@ -1,16 +1,15 @@
-name: Selenium CI Pipeline
+name: Selenium CI
 
 on:
   push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Java
@@ -19,5 +18,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build & Run Tests
+      - name: Run Tests
         run: mvn clean test
