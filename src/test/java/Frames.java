@@ -15,14 +15,14 @@ public class Frames {
         driver.manage().deleteAllCookies();
         driver.get("https://jqueryui.com/droppable/");
 
-        // ✅ Switch to frame correctly (no need for // in class name)
+        //  Switch to frame correctly (no need for // in class name)
         driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame")));
 
-        // ✅ Locate elements correctly using id (remove //)
+        //  Locate elements correctly using id (remove //)
         WebElement source = driver.findElement(By.id("draggable"));
         WebElement target = driver.findElement(By.id("droppable"));
 
-        // ✅ Perform drag and drop
+        //  Perform drag and drop
         Actions actions = new Actions(driver);
         actions.dragAndDrop(source, target).perform();
 

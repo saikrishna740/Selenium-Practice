@@ -31,13 +31,13 @@ public class CartPage extends AbstractComponent {
     }
 
     public CheckoutPage goToCheckout() {
-        // ✅ Wait for spinner to disappear before clicking
+        // Wait for spinner to disappear before clicking
         waitForElementToDisappear(spinner);
 
-        // ✅ Scroll into view before clicking
+        // Scroll into view before clicking
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkoutBtn);
 
-        // ✅ Try normal click, fallback to JS click if intercepted
+        // Try normal click, fallback to JS click if intercepted
         try {
             waitForClickable(checkoutBtn);
             checkoutBtn.click();

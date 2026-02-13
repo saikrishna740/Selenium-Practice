@@ -33,17 +33,17 @@ public class CheckoutPage extends AbstractComponent {
 
     public ConfirmationPage submitOrder() {
         try {
-            // ✅ Scroll into view using JavaScript before clicking
+            //  Scroll into view using JavaScript before clicking
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkoutBtn);
 
-            // ✅ Wait until clickable
+            //  Wait until clickable
             waitForClickable(checkoutBtn);
 
-            // ✅ Click via JavaScript (more reliable if UI overlaps)
+            //  Click via JavaScript (more reliable if UI overlaps)
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutBtn);
 
         } catch (ElementClickInterceptedException e) {
-            System.out.println("⚠️ Click intercepted, retrying via JavaScript...");
+            System.out.println(" Click intercepted, retrying via JavaScript...");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkoutBtn);
         }
 
